@@ -5,14 +5,18 @@
         public int EncuentraFaltante(int[] A)
         {
             //Declarar variables a utilizar y la matriz
+            int siguiente;
             int Faltante = 0;
-            int[] B = new int[A.Length];
             //ordenamos la matriz
-            Array.Sort(B);
+            Array.Sort(A);
             //recorre cada uno de los valores de B y ve que valor falta
-            for (int i = 0; i < B.Length -1; i++)
+            for (int i = 0; i < A.Length -1; i++)
             {
-
+                siguiente = i + 1;
+                if ((A[siguiente] - A[i]) > 1)
+                {
+                    Faltante = A[i] + 1;
+                }
             }
             
             return Faltante;

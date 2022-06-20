@@ -1,3 +1,5 @@
+using NumeroFaltanteBiblioteca;
+
 namespace NumeroFaltantePrueba
 {
     [TestClass]
